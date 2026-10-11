@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a91426">
+<title>Feliz cumpleaños, Chrys ♡</title>
+<style>
+  :root { --red:#a91426; --dark:#720d1a; --pink:#f7dfe1; --cream:#fffafa; --ink:#64232a; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:#fff; color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.16; z-index:-1;
+    background-image:
+      radial-gradient(circle at 15px 15px, #c51f35 2px, transparent 3px),
+      radial-gradient(circle at 35px 35px, #c51f35 2px, transparent 3px);
+    background-size:50px 50px;
+  }
+  .top-deco { text-align:center; color:var(--red); font-size:1.35rem; letter-spacing:.35rem; padding:16px 8px 0; }
+  header { text-align:center; padding:32px 18px 22px; }
+  .intro { min-height:78vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px 18px; }
+  .envelope { width:190px; height:130px; margin:22px auto; position:relative; cursor:pointer; border:0; background:transparent; }
+  .envelope .body { position:absolute; inset:20px 0 0; background:#b51e32; border:2px solid #7e1020; border-radius:5px; }
+  .envelope .flap { position:absolute; top:20px; left:0; width:0; height:0; border-left:95px solid transparent; border-right:95px solid transparent; border-top:68px solid #e65c68; transform-origin:top; transition:transform .45s ease; z-index:2; }
+  .envelope .letter-card { position:absolute; z-index:1; left:18px; right:18px; top:36px; height:76px; background:#fffafa; border:1px solid #e8a6ad; display:flex; align-items:center; justify-content:center; color:#a91426; transition:transform .45s ease; }
+  .envelope.open .flap { transform:rotateX(180deg); }
+  .envelope.open .letter-card { transform:translateY(-42px); }
+  .seal { display:inline-block; border:2px solid var(--red); color:var(--red); padding:7px 12px; transform:rotate(-5deg); font-size:.8rem; letter-spacing:.12rem; }
+  h1 { color:var(--red); font-size:clamp(2.3rem, 10vw, 4.8rem); margin:18px 0 8px; line-height:1.05; }
+  .subtitle { font-size:1.1rem; }
+  .btn {
+    border:1px solid var(--red); background:var(--red); color:white; border-radius:30px;
+    padding:12px 19px; font-size:1rem; cursor:pointer; font-family:inherit;
+    box-shadow:0 4px 0 #720d1a; transition:transform .15s;
+  }
+  .btn:active { transform:translateY(3px); box-shadow:0 1px 0 #720d1a; }
+  main { width:min(900px, 100%); margin:auto; padding:8px 16px 45px; }
+  section { margin:22px 0; padding:23px 18px; border:1px solid #e8a6ad; border-radius:18px; background:rgba(255,250,250,.96); }
+  h2 { color:var(--red); text-align:center; font-size:1.7rem; margin:0 0 15px; }
+  .letter { white-space:pre-line; line-height:1.75; font-size:1.04rem; }
+  .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
+  .gallery img { width:100%; height:190px; object-fit:cover; border:3px dashed #bd2839; border-radius:8px; }
+  .hint { text-align:center; font-size:.92rem; color:#8d5960; }
+  .message-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .message { min-height:65px; background:white; color:var(--red); border:1px solid #c52d40; border-radius:12px; padding:13px 8px; font:inherit; cursor:pointer; }
+  .reveal { display:none; grid-column:1/-1; padding:12px; background:#fff0f1; border-radius:12px; line-height:1.5; text-align:center; }
+  .reveal.show { display:block; animation:pop .25s ease-out; }
+  @keyframes pop { from {opacity:0; transform:scale(.96)} to {opacity:1; transform:scale(1)} }
+  .music-box { text-align:center; line-height:1.6; }
+  .music-link { display:inline-block; margin-top:10px; color:var(--red); font-weight:bold; }
+  footer { text-align:center; color:var(--red); padding:10px 12px 28px; }
+  .petals { color:var(--red); letter-spacing:.45rem; font-size:1.4rem; }
+  @media (max-width:480px) {
+    section { padding:20px 14px; }
+    .gallery img { height:145px; }
+    .letter { font-size:1rem; }
+    .message-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="top-deco">✿ ❀ ── ✧ 和 ✧ ── ❀ ✿</div>
+<header>
+  <div class="seal">お誕生日おめでとう · FELIZ CUMPLEAÑOS</div>
+  <h1>¡Feliz cumpleaños,<br>Chrys! ♡</h1>
+  <p class="subtitle">Una pequeña sorpresa hecha con mucho cariño.</p>
+  <button class="btn" onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">Abrir tu carta 💌</button>
+</header>
+<main>
+  <section id="carta">
+    <h2>Una cartita para ti ♡</h2>
+    <div class="letter">Querido Chrys.. Sora o mi querido brochacho:
+
+Sé que hoy cumples añitos y que pues OSEA YA ESTÁS MÁS VIEJITO JIJI, pues vengo aquí a desearte feliz cumpleaños, ya que eres mi amiguito, mi brochacho, mi amor y pues sé que nos conocemos poco, pero la verdad que contigo me he sentido feliz y me he divertido de cualquier manera. Que tipo no importa qué hagamos, me divierto contigo y me río.
+
+Quiero que sepas que sos alguien importante para mí y que siempre te apoyaré en las buenas y malas, y agradezco mucho que te aguantes mis golpes de depresión y mis cosas bien raras. Y pues preguntarás... ¿qué coño son las imágenes de abajo? Son personajes de mi serie favorita que siento que somos tú y yo (yo soy la morena Oshi).
+
+Amalia y Evangelyne son amigas desde la infancia y Evangelyne sigue a Amalia a cualquier aventura, casi arriesgando su vida por Amalia. Y Amalia, aunque es bastante grosera, ella daría su vida por Eva.
+
+¿Y preguntarás quién es el del gorro azul? Es Yugo, y Amalia desde que lo conoció quiso ayudarlo a encontrar a su familia y desde entonces han sido las personas más importantes de su vida. Al final terminan juntos a pesar de las cosas y desafíos, jiji (muy cursi lo sé, pero ponerle Pibbles era muy quemado).</div>
+    <div class="gallery">
+      <img src="assets/amalia_evangelyne.png" alt="Amalia y Evangelyne">
+      <img src="assets/yugo_amalia.png" alt="Yugo y Amalia">
+    </div>
+  </section>
+
+  <section>
+    <h2>Mensajitos secretos 🎐</h2>
+    <p class="hint">Toca cada sello para descubrir un mensajito.</p>
+    <div class="message-grid">
+      <button class="message" onclick="reveal('m1')">✿ Sello rojo 1</button>
+      <button class="message" onclick="reveal('m2')">✿ Sello rojo 2</button>
+      <button class="message" onclick="reveal('m3')">✿ Sello rojo 3</button>
+      <button class="message" onclick="reveal('m4')">✿ Sello rojo 4</button>
+      <div id="m1" class="reveal">Espero que hoy te consientan mucho y que tengas un día tan bonito como vos. ♡</div>
+      <div id="m2" class="reveal">Gracias por hacerme reír con tus ocurrencias y por compartir momentos conmigo. ❤️</div>
+      <div id="m3" class="reveal">Aunque nos conozcamos desde hace poquito, me alegra mucho haberte conocido.</div>
+      <div id="m4" class="reveal">Nunca olvides que aquí tenés una amiguita que te desea cosas bonitas. ¡Feliz cumple! 🎂</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Una canción para ti 🎵</h2>
+    <div class="music-box">
+      <p>Esta parte está lista para poner la canción que tú elijas.</p>
+      <p class="hint">Cuando tengas el enlace de YouTube de la canción, reemplaza el enlace de ejemplo en el archivo <b>index.html</b>.</p>
+      <a class="music-link" href="https://music.youtube.com/watch?v=PTGVKC9S1j4&si=LQVmGVlpguzXgaPl" target="_blank" rel="noopener">🎶 Escuchar nuestra canción en YouTube Music</a>
+    </div>
+  </section>
+  <footer><div class="petals">❀ ✿ ❀</div><p>Hecho especialmente para ti, Chrys ♡</p><p>Que este nuevo año de vida te traiga mucha felicidad.</p></footer>
+</main>
+<script>
+function reveal(id) {
+  const item = document.getElementById(id);
+  item.classList.toggle('show');
+}
+</script>
+</body>
+</html>
